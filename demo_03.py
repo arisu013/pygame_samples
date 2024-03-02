@@ -28,11 +28,11 @@ running = True
 # infinite loop top ----
 while running:
    
- for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-        running = False
-        if not running:
-            break
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+            if not running:
+                break
         dt_now = datetime.now()
         time_now = (dt_now.hour * 10000
                     + dt_now.minute * 100
