@@ -50,7 +50,7 @@ while running:
 
         pygame.display.flip()  # update_col
         clock.tick(20)  # FPS, Frame Per Second
-    screen.fill(DARK_GRAY)
+        screen.fill(DARK_GRAY)
 # infinit loop bottom ----
 
 pygame.quit()
