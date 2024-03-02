@@ -21,6 +21,9 @@ screen = pygame.display.set_mode([400, 320])
 
 lcd1 = LCD_font(screen)
 
+lcd1.init_col(BLOCK_SIZE=7, BLOCK_INTV=8, COLOR_ON=GREEN, COLOR_OFF=GRAY)
+lcd1.init_row(X_ORG=8, Y_ORG=8, COL_INTV=6)
+
 running = True
 # infinite loop top ----
 while running:
