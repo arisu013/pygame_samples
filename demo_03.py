@@ -26,13 +26,14 @@ lcd1.init_row(X_ORG=8, Y_ORG=8, COL_INTV=6)
 
 running = True
 # infinite loop top ----
+
 while running:
-   
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-            if not running:
-                break
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        if not running:
+            break
+
         dt_now = datetime.now()
         time_now = (dt_now.hour * 10000
                     + dt_now.minute * 100
@@ -47,8 +48,10 @@ while running:
         lcd1.update_col(col=6, code=dt_now.second // 10)
         lcd1.update_col(col=7, code=dt_now.second % 10)
 
-       
- 
+        pygame.display.flip()  # update_col
+        clock.tick(20)  # FPS, Frame Per Second
+    screen.fill(DARK_GRAY)
+# infinit loop bottom ----
 
 pygame.quit()
 
