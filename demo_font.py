@@ -1,9 +1,10 @@
 # demo for text display by pygame.font (this is OLD)
-# NOTICE: You should use replacement module pygame.freetype instead.
-# 注意：これを置き換えるpygame.freetypeを代わりに使うべし。
+# NOTICE: You should use replacement module  pygame.freetypeinstead.
+# 注意：これを置き換えるpygame.freetypeを代わりに使うべし
+
 
 import pygame
-import pygame.font
+import pygame.freetype
 
 
 pygame.init()

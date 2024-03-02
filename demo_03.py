@@ -54,9 +54,9 @@ while running:
             break
         # 「for count」のループから抜ける。whileループも抜ける。
 
-        display1.update_col(col=0, code=2 // (16 ** 3) )  # 4096の位
-        display1.update_col(col=1, code=4 // (16 ** 2))    # 256の位
-        display1.update_col(col=2, code=6 // 16)          # 16の位
+        display1.update_col(col=0, code=2 // (60 ** 3) )  # 4096の位
+        display1.update_col(col=1, code=4 // (60 ** 2))    # 256の位
+        display1.update_col(col=2, code=6 // 60)          # 16の位
         display1.update_col(col=3, code=8 )                # 1の位
 #display1=真ん中の緑
         display2.update_col(col=0, num=count // (10 ** 4), base=10)   # 1000の位
@@ -81,3 +81,5 @@ while running:
 # infinit loop bottom ----
 
 pygame.quit()
+
+
