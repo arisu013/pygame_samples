@@ -22,11 +22,10 @@ lcd1 = LCD_font_styles
 running = True
 # infinite loop top ----
 while running:
-    for count in range(16 ** 4):  # 0から65535まで
-        # press ctrl-c or close the window to stop
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
+   
+ for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+        running = False
         if not running:
             break
         dt_now = datetime.now()
@@ -34,14 +33,14 @@ while running:
                     + dt_now.minute * 100
                     + dt_now.second)
         
-lcd1 update_col(col=0, code=dt_now.hour // 10)
-lcd1 update_col(col=1, code=dt_now.hour % 10)
-lcd1 update_col(col=2, code=10)
-lcd1 update_col(col=3, code=dt_now.minute // 10)
-lcd1 update_col(col=4, code=dt_now.minute % 10)
-lcd1 update_col(col=5, code=10)
-lcd1 update_col(col=6, code=dt_now.second // 10)
-lcd1 update_col(col=7, code=dt_now.second % 10)
+        lcd1.update_col(col=0, code=dt_now.hour // 10)
+        lcd1.update_col(col=1, code=dt_now.hour % 10)
+        lcd1.update_col(col=2, code=10)
+        lcd1.update_col(col=3, code=dt_now.minute // 10)
+        lcd1.update_col(col=4, code=dt_now.minute % 10)
+        lcd1.update_col(col=5, code=10)
+        lcd1.update_col(col=6, code=dt_now.second // 10)
+        lcd1.update_col(col=7, code=dt_now.second % 10)
 
        
  
