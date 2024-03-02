@@ -16,7 +16,7 @@ WHITE = (250, 250, 250)
 pygame.init()
 
 clock = pygame.time.Clock()
-screen = pygame.display.set_mode([400, 320])
+screen = pygame.display.set_mode([600, 400])
 
 
 lcd1 = LCD_font(screen)
