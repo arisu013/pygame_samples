@@ -3,7 +3,6 @@
 
 from datetime import datetime
 import pygame
-from seven_seg_pg import Seven_seg
 from lcd_font_pg import LCD_font
 
 DARK_GRAY = (40, 40, 40)
@@ -35,14 +34,14 @@ while running:
                     + dt_now.minute * 100
                     + dt_now.second)
         
-lcd1.update_col(col=0, code=dt_now.hour // 10)
-lcd1.update_col(col=1, code=dt_now.hour % 10)
-lcd1.update_col(col=2, code=10)
-lcd1.update_col(col=3, code=dt_now.minute // 10)
-lcd1.update_col(col=4, code=dt_now.minute % 10)
-lcd1.update_col(col=5, code=10)
-lcd1.update_col(col=6, code=dt_now.second // 10)
-lcd1.update_col(col=7, code=dt_now.second % 10)
+lcd1 update_col(col=0, code=dt_now.hour // 10)
+lcd1 update_col(col=1, code=dt_now.hour % 10)
+lcd1 update_col(col=2, code=10)
+lcd1 update_col(col=3, code=dt_now.minute // 10)
+lcd1 update_col(col=4, code=dt_now.minute % 10)
+lcd1 update_col(col=5, code=10)
+lcd1 update_col(col=6, code=dt_now.second // 10)
+lcd1 update_col(col=7, code=dt_now.second % 10)
 
        
  
