@@ -59,21 +59,21 @@ while running:
         display1.update_col(col=2, code=6 // 60)          # 16の位
         display1.update_col(col=3, code=8 )                # 1の位
 #display1=真ん中の緑
-        display2.update_col(col=0, num=count // (10 ** 4), base=10)   # 1000の位
-        display2.update_col(col=1, num=count // (10 ** 3), base=10)   # 1000の位
-        display2.update_col(col=2, num=count // (10 ** 2), base=10)   # 100の位
-        display2.update_col(col=3, num=count // (10 ** 1), base=10)   # 10の位
-        display2.update_col(col=4, num=count // (10 ** 0), base=10)   # 1の位 
+        display2.update_col(col=0  // (10 ** 4))   # 1000の位
+        display2.update_col(col=1  // (10 ** 3))   # 1000の位
+        display2.update_col(col=2  // (10 ** 2))   # 100の位
+        display2.update_col(col=3  // (10 ** 1))   # 10の位
+        display2.update_col(col=4  // (10 ** 0))   # 1の位 
 #display2=赤
-        display3.disp_num2(zfil=False, rjust=3, num=count, base=10)
+        display3(zfil=False, rjust=3)
 #display3=白上段
-        display4.disp_num2(zfil=True, rjust=16, num=count, base=2)
+        display4(zfil=True, rjust=16)
 #display4=白下段
         dt_now = datetime.now()
         time_now = (dt_now.hour * 10000
                     + dt_now.minute * 100
                     + dt_now.second)
-        display5.disp_num2(zfil=True, rjust=6, num=time_now, base=10)
+        display5(zfil=True, rjust=6, num=time_now, base=10)
 #display5=青
         pygame.display.flip()  # update_col
         clock.tick(20)  # FPS, Frame Per Second
