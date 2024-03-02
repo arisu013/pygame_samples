@@ -19,7 +19,7 @@ clock = pygame.time.Clock()
 screen = pygame.display.set_mode([400, 320])
 
 
-lcd1 = LCD_font(screen=)
+lcd1 = LCD_font(screen)
 
 running = True
 # infinite loop top ----
