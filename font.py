@@ -39,16 +39,17 @@ while running:
                     + dt_now.minute * 100
                     + dt_now.second)
         
-        lcd1.update_col(col=0,code=1)
-        lcd1.update_col(col=1,code=2)
-        lcd1.update_col(col=2,code=3)
-        lcd1.update_col(col=3,code=4)
-        lcd1.update_col(col=4,code=5)
-        lcd1.update_col(col=5,code=6)
-        lcd1.update_col(col=6,code=7)
-        lcd1.update_col(col=7,code=8)
-        lcd1.update_col(col=8,code=9)
-        lcd1.update_col(col=9,code=10)
+        lcd1.update_col(col=0,code=0)
+        lcd1.update_col(col=1,code=1)
+        lcd1.update_col(col=2,code=2)
+        lcd1.update_col(col=3,code=3)
+        lcd1.update_col(col=4,code=4)
+        lcd1.update_col(col=5,code=5)
+        lcd1.update_col(col=6,code=6)
+        lcd1.update_col(col=7,code=7)
+        lcd1.update_col(col=8,code=8)
+        lcd1.update_col(col=9,code=9)
+        lcd1.update_col(col=10,code=10)
 
         pygame.display.flip()  # update_col
         clock.tick(20)  # FPS, Frame Per Second
