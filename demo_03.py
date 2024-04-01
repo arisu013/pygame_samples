@@ -53,9 +53,9 @@ while running:
         lcd1.update_col(col=7, code=dt_now.second % 10)
         #日付
         lcd2.update_col(col=0,code=dt_now.year // 1000)
-        lcd2.update_col(col=1,code=dt_now.year // 100 -20)
-        lcd2.update_col(col=2,code=dt_now.year // 10 -200)
-        lcd2.update_col(col=3,code=dt_now.year -2020)
+        lcd2.update_col(col=1,code=dt_now.year // 100)
+        lcd2.update_col(col=2,code=dt_now.year // 10 )
+        lcd2.update_col(col=3,code=dt_now.year //1)
         lcd2.update_col(col=4,code=10)
         lcd2.update_col(col=5,code=dt_now.month // 10)
         lcd2.update_col(col=6,code=dt_now.month % 10)
