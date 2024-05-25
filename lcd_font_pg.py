@@ -4,6 +4,9 @@
 # from math import log
 import pygame
 from pygame.locals import Rect
+from mcje.minecraft import Minecraft
+import param_MCJE as param
+
 
 
 LCD_0 = (0, 1, 1, 1, 0,
@@ -102,8 +105,8 @@ LCD_11 = (1, 0, 0, 0, 0,
           0, 0, 0, 1, 1,
           0, 0, 0, 0, 1,)
 
-with open("fonts/font.txt", encoding="utf-8") as f:
-    lcd_font_styles = f.read().split('\n')
+#with open("fonts/font.txt", encoding="utf-8") as f:
+#    lcd_font_styles = f.read().split('\n')
     # print(lcd_font_styles)
 
 LCD_font_styles = (LCD_0, LCD_1, LCD_2, LCD_3, LCD_4, LCD_5, LCD_6, LCD_7, LCD_8, LCD_9,LCD_10, LCD_11)
@@ -155,3 +158,7 @@ class LCD_font():
                 # ドットを描く
                 pygame.draw.rect(self.screen, color, Rect(org1[0], org1[1], block_size, block_size))
                 i += 1
+
+    
+
+

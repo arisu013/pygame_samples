@@ -3,7 +3,10 @@
 from datetime import datetime
 import pygame
 from lcd_font_pg import LCD_font
-from double_buffer_display import BufferDisplay
+from mcje.minecraft import Minecraft
+import param_MCJE as param
+
+mc = Minecraft.create(port=param.PORT_MC)
 
 
 DARK_GRAY = (40, 40, 40)
@@ -17,12 +20,13 @@ WHITE = (250, 250, 250)
 pygame.init()
 
 clock = pygame.time.Clock()
-screen = pygame.display.set_mode([600, 400])
 
 
-lcd1 = LCD_font(screen)
-lcd2 = LCD_font(screen)
+lcd1 = LCD_font
+lcd2 = LCD_font
 
+
+running = True
 lcd1.init_col(BLOCK_SIZE=7, BLOCK_INTV=8, COLOR_ON=GREEN, COLOR_OFF=GRAY)
 lcd1.init_row(X_ORG=8, Y_ORG=20, COL_INTV=6)
 
@@ -31,6 +35,9 @@ lcd2.init_row(X_ORG=8, Y_ORG=8, COL_INTV=6)
 
 running = True
 # infinite loop top ----
+mc.postToChat("clock")
+mc.setBlock(5, 5, 5,  "gold_block")
+
 
 while running:
         for event in pygame.event.get():
@@ -71,9 +78,15 @@ while running:
 
         pygame.display.flip()  # update_col
         clock.tick(20)  # FPS, Frame Per Second
-        screen.fill(DARK_GRAY)
+        
 # infinit loop bottom ----
 
 pygame.quit()
 
+# infinite loop top ----
+
+
+        
+
+        
 
