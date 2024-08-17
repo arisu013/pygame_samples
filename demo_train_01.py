@@ -10,7 +10,7 @@ pygame.init()
 mc = Minecraft.create(port=param.PORT_MC)
 mc.postToChat('cube-train in the Minecraft')
 
-MC_X0, MC_Y0, MC_Z0 = 50, 0, -200
+MC_X0, MC_Y0, MC_Z0 = -50, 0, -200
 
 color_on_mc = param.SEA_LANTERN_BLOCK
 color_off_mc = param.AIR
@@ -36,7 +36,7 @@ reso = 180 / math.pi * 0.6
 speed = 4
 reso = 180 / math.pi * 0.1
 #幅
-dy = 5
+dy = 20
 
 
 def draw_train(start=0, draw_length=0, color=color_on):
@@ -67,12 +67,12 @@ while running:
             running = False
      # delete previous drawing
     draw_train(start=theta - length, draw_length=speed, color=color_bg)
-    draw_train_mc(start=theta - length, draw_length=speed, dy=dy, color=color_off_mc)
+    draw_train_mc(start=theta - length, draw_length=speed, dy=dy, color=color_on_mc)
     # draw trail
     # draw_train(start=theta - length, draw_length=speed, color=color_off)
     # draw new train
     draw_train(start=theta, draw_length=speed, color=color_on)
-    draw_train_mc(start=theta, draw_length=speed, dy=dy, color=color_off_mc)
+    draw_train_mc(start=theta, draw_length=speed, dy=dy, color=color_on_mc)
     theta += speed
 
     pygame.display.flip()  # update
