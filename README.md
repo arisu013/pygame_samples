@@ -1,33 +1,60 @@
-# pygame_samples
+# らせん状にブロックを置く
 
- - demo_01.py: pygameの超簡単なデモ。
- - demo_02.py: 7セグのシミュレーション、各セグメントを2ブロックで構成。Seven_segクラス使用。
- - demo_LCD_font_01.py: 5x7のLCDフォント制作用。LCD_fontクラス使用。
- - demo_LCD_font.py: 5x7のLCDフォント、完成版。
+## できること
 
- - demo_freetype.py: pygame.freetypeでテキスト表示。（新しい方式）
- - demo_freetype.py: pygame.fontでテキスト表示。（古い方式）
- - demo_openmoji.py: オープンソースの絵文字、openmojiのデモ。キー操作のデモ。
- - seven_seg_pg.py: Seven_segクラス
- - lcd_font_pg.py: LCD_fontクラス
+- ブロックの種類の指定
 
+- 幅の指定
 
+- 位置の指定
 
+## とりあえず実行してみる
 
-[<img src="./images/clock.png" width="400">](./images/clock.png)
+[<img src="./images/rasen_start.png" width="400">](./images/rasen_start.png.png)   
+
+下から上に向かってらせん状にブロックが積みあがっていきました。
 
 
+### 位置の指定
 
-[<img src="./images/Fontdezain.png" width="400">](./images/Fontdezain.png)   
+14行目の
+
+`MC_X0, MC_Y0, MC_Z0 = -100, -80, 5`
+
+の数値の部分を変更することで位置を指定できます。左からX座標、Y座標、Z座標になっています。
+
+### 半径の変更
+
+35行目にある
+
+`r = 8`
+
+の数値の部分が半径になります。
 
 
+### ブロックの種類の変更
+
+15行目から18行目に
+
+```
+color_on_mc = param.SEA_LANTERN_BLOCK
+
+color_off_mc = param.AIR
+```
+
+と宣言されています。`param.`の後の部分を好きなブロックに変えることで、ブロックの種類を変更することができます。
+
+また、color_off_mc、を使う場合は
+
+70行目の
+
+` draw_train_mc(start=theta - length, draw_length=speed, dy=dy, color=color_on_mc)`
+
+75行目の
+
+`draw_train_mc(start=theta, draw_length=speed, dy=dy, color=color_on_mc)`
+
+の`color_on_mc`の部分を`color_off_mc`に置き換える必要があります。
 
 
-
-[<img src="./images/123456789.png" width="400">](./images/123456789.png)
-
-
-
-
-
- 
+現状やれることは少ないです。
