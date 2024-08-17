@@ -36,7 +36,7 @@ reso = 180 / math.pi * 0.6
 speed = 4
 reso = 180 / math.pi * 0.1
 #幅
-dy = 20
+dy = 5
 
 
 def draw_train(start=0, draw_length=0, color=color_on):
