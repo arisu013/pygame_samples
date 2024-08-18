@@ -80,7 +80,7 @@ color_off_mc = param.AIR
 [<img src="./images/rasen5.png" width="400">](./images/rasen5.png.png)   
 
 
-## 改善したいところ
+## 今後やりたいこと
 
 - 横向きでもできるようにする
 
