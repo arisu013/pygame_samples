@@ -57,4 +57,3 @@ color_off_mc = param.AIR
 の`color_on_mc`の部分を`color_off_mc`に置き換える必要があります。
 
 
-現状やれることは少ないです。
